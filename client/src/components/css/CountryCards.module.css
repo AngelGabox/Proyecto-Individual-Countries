@@ -1,0 +1,43 @@
+#card {
+    margin: 20px 20px 10px 10px;
+    height: 200px;
+    width: 150px;
+    border-style: inset;
+    border-radius: 28px;
+    color: rgb(0, 0, 0);
+    border-color: #0000ff;
+    background-color: #7ef0a0de;
+    justify-content: center;
+    transition: 400ms all;
+    align-items: center;
+    flex-direction: column;
+ }
+ #card:hover{
+    background-color:  hsla(0, 0%, 0%, 0.726) ;
+    border-radius: 10px;
+    border-color: #0000ff88;
+    color: white;
+    cursor: pointer;
+    transform: translate3d(0px, -20px, 10px);
+ }
+ #card:hover .img {
+    transition: 400ms all;
+    border-radius: 8px;
+ }
+ h4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+ }
+ .img{
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    margin: 0px;
+    padding: 0px;
+    width: inherit;
+    transition: inherit;
+    height: 100px;
+   -o-object-fit: cover;
+   object-fit: cover;
+ }

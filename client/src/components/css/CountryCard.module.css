@@ -1,0 +1,80 @@
+#card {
+   margin: 30px 20px 10px 10px;
+   height: 200px;
+   width: 150px;
+   border-style: inset;
+   border-radius: 28px;
+   color: rgb(0, 0, 0);
+   border-color: #0000ff;
+   background-color: #7ef0a0de;
+   justify-content: center;
+   transition: 1000ms all;
+   align-items: center;
+   flex-direction: column;
+}
+#card:hover {
+   transition: 1000ms;
+   background-color:  hsla(0, 0%, 0%, 0.822) ;
+   height: 470px;
+   width: 300px;
+   margin-top: 50px;
+   border-radius: 10px;
+   border-color: #0000ff88;
+   color: white;
+   cursor: pointer;
+}
+#card:hover .img1 {
+   height: 180px;
+   transition: 1000ms;
+   border-radius: 8px;
+}
+
+h5{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 0px;
+}
+h4{
+   margin: 0px;
+}
+.img1{
+   border-top-left-radius: 25px;
+   border-top-right-radius: 25px;
+   margin: 0px;
+   padding: 0px;
+   width: inherit;
+   transition:initial;
+   height: 95px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+#card ul{
+   display: none;
+   transition: 400ms all;
+   justify-content: center;
+   list-style: none;
+   margin: 10px;
+   padding: 0px 0px;
+   position: absolute;
+   width: 110px;
+   text-align:start;
+}
+#card:hover ul, ul:hover {
+   display: flex;
+   align-items: flex-start;
+   flex-direction: column;
+   margin: 0px;
+   padding-left: 20px;
+
+}
+#card li{
+   display: flex;
+   align-items: flex-start;
+   justify-content: flex-start;
+   font-size: 16px;
+   margin: 0px;
+   padding-bottom: 10px;
+   height: 20px;
+   width: 300px;
+}

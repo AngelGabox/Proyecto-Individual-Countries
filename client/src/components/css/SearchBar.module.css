@@ -1,0 +1,31 @@
+.container{
+    display: flex;
+    align-items: flex-start;
+}
+.search{
+    background-color: rgba(0, 0, 0, 0.541);
+    border: 2px solid white;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius:  25px;
+    color: white;
+    font-family: "Muli", sans-serif;
+    font-size: 16px;
+    height: 34px;
+    outline: none;
+    padding: 0px 10px;
+    width: 30vh;
+    content: white ;
+
+}
+.botone{
+    background-color: rgba(0, 0, 0, 0.349);
+    border: 2px solid white;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius:  25px;
+    color: white;
+    font-size: 10px;
+    height: 34px;
+    outline: none;
+    padding: 0px;
+    width: 100px;
+}

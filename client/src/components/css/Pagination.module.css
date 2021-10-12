@@ -1,0 +1,61 @@
+.container{
+    position:static;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+#contain{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid rgba(247, 247, 247, 0.63);
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.459);
+    margin-bottom: 10vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.number {
+    background-color: rgba(18, 29, 189, 0.479);
+    border-radius: 8px;
+    cursor: pointer;
+    border-color:hsl(123, 100%, 64%);
+    color:rgb(255, 255, 255);
+    font-size: 14px;
+}
+.select{
+    background-color:  hsl(0, 0%, 100%) ;
+    border-radius: 8px;
+    border-color: rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+}
+
+.number:hover{
+    background-color:  hsl(0, 0%, 100%) ;
+    border-radius: 8px;
+    border-color: rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+}
+.number+ .number{
+    margin: 0px 2px
+}
+h2{
+    margin: 0px;
+    color: white;
+    font-size: 30px;
+}
+.flecha{
+    background-color: rgba(18, 29, 189, 0.479);
+    border-radius: 8px;
+    cursor: pointer;
+    border-color:hsl(123, 100%, 64%);
+    color:rgb(255, 255, 255);
+    font-size: 14px;
+}
+.flecha:hover{
+    background-color:  hsl(0, 0%, 100%) ;
+    border-radius: 8px;
+    border-color: rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+}

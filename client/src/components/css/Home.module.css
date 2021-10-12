@@ -1,0 +1,25 @@
+.home{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.order{
+    /* display: flex;
+    height: 20px;
+    margin: 0px 50vh; */
+    background-color: rgba(0, 0, 0, 0.781);
+    border: 2px solid white;
+    border-radius: 25px;
+    color: white;
+    font-family: "Muli", sans-serif;
+    font-size: 16px;
+    height: 30px;
+    outline: none;
+    margin: 0px 40vh;
+    padding: 0px 20px;
+    width: 240px;
+    content: white ;
+}
+.option{
+    background-color: rgba(0, 0, 0, 0.452);
+}

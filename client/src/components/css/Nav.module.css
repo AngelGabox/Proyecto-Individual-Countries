@@ -1,0 +1,66 @@
+.divContainer{
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    flex-direction: row;
+    height: 10vh;
+    padding: '5px 0px';
+    background-color: hsla(0, 0%, 0%, 0.4);
+    border-bottom: 2px solid white;
+  }
+  .el{
+      color: white;
+      cursor: pointer;
+      font-size: 14px;
+      padding-left: 30px;
+      text-decoration: none;
+      font-size: 18px;
+  }
+  .el:hover{
+      text-decoration: underline;
+  }
+  .menu{
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      height: 100%;
+      margin-right: 30px;
+  }
+  .menu:hover{
+      cursor: pointer;
+      text-decoration: underline white;
+  }
+  .menu ul{
+      display: none;
+      list-style: none;
+      position: absolute;
+      width: 100px;
+      text-align: right;
+  }
+  .menu:hover ul, ul:hover {
+      display: block;
+      margin: 50px 20px;
+      padding: 220px 0px 0px 0px;
+  }
+  .menu li {
+      margin: 20px 0px;
+  }
+  li{
+      font-size: 20px;
+  }
+  .menu li a {
+      color: white;
+      text-decoration: none;
+  }
+  .menu li a:hover {
+      text-decoration: underline;
+  }
+  p{
+      color: white;
+      font-size: 18px;
+  }
+  .img {
+      height: 100%;
+      width: 80px ;
+  }
+  

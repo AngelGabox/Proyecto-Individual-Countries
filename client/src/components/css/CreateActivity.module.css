@@ -1,0 +1,140 @@
+.contentForm{
+    background-color: rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: row;
+    border: 2px solid white;
+    border-radius: 40px;
+    margin-top: 20px;
+}
+.form{
+    color: white;
+    padding: 20px 48px 40px;
+    min-height: calc(100vh - 300px);
+    margin: 30px 0px;
+    width: 300px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.form1{
+    color: white;
+    padding: 30px;
+    border-left:2px solid white;
+}
+.formu1{
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid white;
+    border-radius: 25px;
+    color: white;
+    font-family: "Muli", sans-serif;
+    font-size: 16px;
+    height: 30px;
+    outline: none;
+    padding: 0px 10px;
+    width: 40vh;
+    content: white ;
+}
+.formu2{
+    display: flex;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid white;
+    border-radius: 25px;
+    color: white;
+    font-family: "Muli", sans-serif;
+    font-size: 16px;
+    height: 30px;
+    outline: none;
+    padding: 0px 20px;
+    width: 10vh;
+    content: white ;
+}
+.formu3{
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid white;
+    border-radius: 25px;
+    color: white;
+    font-family: "Muli", sans-serif;
+    font-size: 16px;
+    height: 30px;
+    outline: none;
+    padding: 0px 20px;
+    width: 20vh;
+    content: white ;
+    place-content: white;
+}
+.select1{
+    background-color: rgba(255, 255, 255, 0.137);
+    border: 2px solid white;
+    border-radius: 25px;
+    color: white;
+    font-family: "Muli", sans-serif;
+    font-size: 16px;
+    height: 30px;
+    outline: none;
+    padding: 0px 20px;
+    width: 30vh;
+    content: white ;
+}
+.select1:hover{
+ background-color: rgba(0, 0, 0, 0.527);
+}
+.select2:hover{
+    background-color: rgba(0, 0, 0, 0.527);
+   }
+.select2{
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid white;
+    border-radius: 25px;
+    color: white;
+    font-family: "Muli", sans-serif;
+    font-size: 16px;
+    height: 30px;
+    outline: none;
+    padding: 0px 20px;
+    width: 30vh;
+    content: white ;
+}
+.crear{
+    display: flex;
+    justify-content: center;
+    background: none;
+    border: 3.2px;
+    border-style: outset;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 19px;
+    color: white;
+    height: 30px;
+    width: 100px;
+    margin-left: 70px;
+    padding: 0px 70px;
+}
+.crear:hover{
+    background-color: rgba(0, 0, 0, 0.541);
+}
+.sum{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    border: 3.2px;
+    border-style: outset;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 19px;
+    color: white;
+    margin: 0px;
+    padding: 0px 10px;
+}
+.sum:hover{
+    background-color: rgba(0, 0, 0, 0.541);
+}
+.orden{
+    display: flex;
+    flex-direction: row;
+    margin: 5px 20px;
+}
+.option1{
+    background-color: rgba(0, 0, 0, 0.452);
+}

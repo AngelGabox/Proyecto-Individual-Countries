@@ -1,0 +1,23 @@
+.divIndex {
+    display: flex;
+    align-items: center;
+    flex-direction:column;
+    height: 100vh;
+    /* background: url('../assests/img/mapa_3.png'); */
+}
+.header{
+    width: 100vw;
+    height: 10vh;
+    margin-top: 0px;
+    background-image: url('../assests/img/descarga.jpg');
+}
+li{
+    display: flex;
+    flex-direction: column;
+}
+#fondo{
+    width: calc(100vh - 200px);
+    height: 400px;
+    -o-object-fit: cover;
+    object-fit: cover;;
+  }
