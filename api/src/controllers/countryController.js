@@ -31,15 +31,20 @@ const preloadCountries = async () => {
     }
 }
 const allCountries = async() =>{
-    return await Country.findAll({
-        include: {
-            model: Activity,
-            attributes: ['name', 'id', "difficulty", "duration", "season"],
-            through: {
+    try {
+        
+        return await Country.findAll({
+            include: {
+                model: Activity,
+                attributes: ['name', 'id', "difficulty", "duration", "season"],
+                through: {
                 attributes: []
             }
         }
     });
+    } catch (error) {
+        console.log(error)
+    }
 }
 const countryXId = async(req, res, next) =>{
     try {
@@ -108,27 +113,6 @@ const getCountries = async(req, res, next) => {
             countries:
             res.status(404).send("No se escontro un pais con esta actividad, crea esta actividad turistica 😉");
         }
-        
-        // if(order === "a-z"){
-        //     countries = countries.sort((a,b) =>{
-        //         return a.name.toLowerCase().localeCompare(b.name.toLowerCase())
-        //     })
-        // }else if(order === 'z-a'){
-        //     countries = countries.sort((a,b) =>{
-        //         return b.name.toLowerCase().localeCompare(a.name.toLowerCase())
-        //     })
-        // }else if(order === 'menorMAYOR'){
-        //     countries = countries.sort((a,b) =>{
-        //         return a.area.toLowerCase().localeCompare(b.area.toLowerCase())
-        //     })
-        // }else if(order === 'MAYORmenor'){
-        //     countries = countries.sort((a,b) =>{
-        //         return b.area.toLowerCase().localeCompare(a.area.toLowerCase())
-        //     })
-        // }
-        
-
-        // console.log('COUNTRIES QUE ME TRAE DE DB:', countries)
         res.status(200).send(countries)
     } catch (error) {
         next(error)
