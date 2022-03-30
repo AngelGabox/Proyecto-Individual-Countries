@@ -32,14 +32,19 @@ const CreateActivity = () => {
     const handleOnSubmit = (e) => {
         e.preventDefault();
         console.log('Values:', values)
-        dispatch(createActivity({...values, countriesAct}))
-        setValues({
-            name:'',
-            difficulty:'',
-            duration:'',
-            season:'',
-            country: ''
-        })
+        if(values.name!==''&&values.difficulty!==''&&values.duration!==''&&values.season!==''&&countriesAct.length >0){
+            dispatch(createActivity({...values, countriesAct}))
+            setValues({
+                name:'',
+                difficulty:'',
+                duration:'',
+                season:'',
+                country: ''
+            })
+            alert('actividad creada con exito')
+        }else{
+            alert('no se pudo crear la actividad, revisa los datos no pueden estar vacios')
+        }
     }
     return (
         <div className={styles.contentForm}>
@@ -59,7 +64,7 @@ const CreateActivity = () => {
                         ))
                     }
                 </select>
-                    <button className={styles.crear}>Crear</button>   
+                    <button className={styles.crear}>Crear</button>  
             </form>
             <div className={styles.form1}>
                 <label style={{fontSize:'14px', margin: '0px 0px 0px 150px'}}>Countries</label>

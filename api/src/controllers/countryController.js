@@ -49,7 +49,7 @@ const countryXId = async(req, res, next) =>{
                 }
             }
         })
-        res.send(country)
+        res.status(200).send(country)
     } catch (error) {
         next(error)
         res.status(400).send('el pais no existe')
@@ -60,7 +60,7 @@ const countryXId = async(req, res, next) =>{
 
 const getCountries = async(req, res, next) => {
     try {
-        let { name, continent, activity, order } = req.query  
+        let { name, continent, activity } = req.query  
         let countries = await allCountries()
 
         if(name && name !== '') {

@@ -23,15 +23,7 @@ const addActivity = async(req, res, next) =>{
 
 const getActivities = async(req, res, next) => {
   try {
-    let activities = await Activity.findAll({
-      include: {
-        model: Country,
-        attributes: [`name`],
-        through: {
-          attributes: []
-        }
-      }
-    })
+    let activities = await Activity.findAll()
     res.status(200).send(activities)
   } catch (error) {
     next(error)

@@ -27,6 +27,5 @@ conn.sync({ force: true }).then(() => {
     const preload = await preloadCountries()
     console.log('%s ' + preload)
     console.log('%s listening at 3001'); // eslint-disable-line no-console
-    
   });
 });
