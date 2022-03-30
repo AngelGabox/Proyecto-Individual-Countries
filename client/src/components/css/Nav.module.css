@@ -54,10 +54,15 @@
   }
   .menu li a:hover {
       text-decoration: underline;
+      color:yellow;
+      
   }
   p{
       color: white;
       font-size: 18px;
+  }
+  .h2:hover{
+      color: yellow;
   }
   .img {
       height: 100%;

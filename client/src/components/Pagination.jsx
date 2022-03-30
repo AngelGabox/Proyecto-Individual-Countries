@@ -26,3 +26,4 @@ const Pagination = ({countries}) => {
 }
 
 export default Pagination
+ 

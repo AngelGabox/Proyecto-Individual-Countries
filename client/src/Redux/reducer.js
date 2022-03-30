@@ -4,13 +4,16 @@ import { GET_ALL_COUNTRIES,
          CREATE_ACTIVITY,
          UNMOUNT_COUNTRIES_FOR_ACTIVITY, 
          COUNTRIES_FOR_ACTIVITY,
-         ORDER
+         ORDER,
+         BY_ACTIVITY,
+         DB_ACTIVITIES
          } from "./actions"
 
 const inicialState = {
     allCountries: [],
     countries: [],
-    countriesAct: []
+    countriesAct: [],
+    activities: []
 }
 
 
@@ -23,18 +26,27 @@ function rootReducer(state = inicialState, action){
             allCountries: action.payload.sort((a,b) =>a.name.toLowerCase().localeCompare(b.name.toLowerCase()))
         }
         case CREATE_ACTIVITY:
+            console.log('action.payload:', action.payload)
             return{
                 ...state,
-                // activities: [...state.activities, action.payload],
                 countriesAct: []
             }
         case COUNTRIES_FOR_ACTIVITY:
-            return state.countriesAct.includes(action.payload)? state : {
+            return action.payload === ''? state : state.countriesAct.includes(action.payload)? state : {
                 ...state,
                 countriesAct: [ ...state.countriesAct, action.payload]
             }
-            
+        case DB_ACTIVITIES:
+            return {
+                ...state,
+                activities: action.payload.map(el => el.name)
+            }            
         case BY_NAME:
+            return{
+                ...state,
+                countries: action.payload
+            }
+        case BY_ACTIVITY:
             return{
                 ...state,
                 countries: action.payload

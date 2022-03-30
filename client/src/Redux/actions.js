@@ -5,14 +5,15 @@ export const GET_COUNTRY = 'GET_COUNTRY';
 export const CREATE_ACTIVITY = 'CREATE_ACTIVITY';
 export const BY_NAME = 'BY_NAME';
 export const BY_CONTINENT = 'BY_CONTINENT' 
+export const BY_ACTIVITY = 'BY_ACTIVITY'
 export const UNMOUNT_ALL_COUNTRIES ='UNMOUNT_ALL_COUNTRIES'
 export const COUNTRIES_FOR_ACTIVITY = 'COUNTRIES_FOR_ACTIVITY'
 export const UNMOUNT_COUNTRIES_FOR_ACTIVITY = 'UNMOUNT_COUNTRIES_FOR_ACTIVITY'
 export const ORDER= 'ORDER'
-
-export const getAllCountries = (order) => dispatch => {
+export const DB_ACTIVITIES = 'DB_ACTIVITIES'
+export const getAllCountries = () => dispatch => {
     try {
-        return axios.get(order?`http://localhost:3001/countries?order=${order}`:'http://localhost:3001/countries')
+        return axios.get(`/countries`)
         .then(res => {
             console.log('Countries:', res.data)
             return dispatch({type: GET_ALL_COUNTRIES, payload: res.data})})
@@ -20,28 +21,46 @@ export const getAllCountries = (order) => dispatch => {
         console.log(error)
     }
 }
-export const byName = (name, order) => dispatch => {
+export const byName = (name) => dispatch => {
     try {
-        return axios.get(`http://localhost:3001/countries?name=${name}&order=${order}`)
+        return axios.get(`/countries?name=${name}`)
             .then(res => dispatch({type: BY_NAME, payload: res.data}))
     } catch (error) {
         console.log(error)
     }
 }
 
-export const byContinent = (continent, order) => dispatch => {
+export const byContinent = (continent) => dispatch => {
     try {
-        return axios.get(`http://localhost:3001/countries?continent=${continent}&order=${order}`)
+        return axios.get(`/countries?continent=${continent}`)
         .then(res => dispatch({type: BY_CONTINENT, payload: res.data})) 
     } catch (error) {
         console.log(error)
     }
 }
+export const byActivity = (activity) => dispatch => {
+    try {
+        return axios.get(`/countries?activity=${activity}`)
+            .then(res => dispatch({type: BY_ACTIVITY, payload: res.data}))
+    } catch (error) {
+        console.log(error)
+    }
+}
+export const activitiesDb = (activity) => dispatch => {
+    try {
+        return axios.get(`/activity`)
+            .then(res => dispatch({type: DB_ACTIVITIES, payload: res.data}))
+    } catch (error) {
+        console.log(error)
+    }
+}
+
 
 export const createActivity = values => dispatch => {
     try{
-        return axios.post('http://localhost:3001/activity/add', {...values})
-            .then(res => dispatch({type:CREATE_ACTIVITY, payload: res.data}))
+        return axios.post(`/activity/add`, {...values})
+            .then(res => {
+                return dispatch({type:CREATE_ACTIVITY, payload: res.data})})
     }catch(err){
         console.log(err)
     }
@@ -58,7 +77,7 @@ export const unmountAllCountries = () =>({type:UNMOUNT_ALL_COUNTRIES})
 
 // export const getCountryById = (id) => dispatch => {
 //     try {
-//         return axios.get(`'http://localhost:3001/countries/:${id}`)
+//         return axios.get(`'${}/countries/:${id}`)
 //             .then(res => dispatch({type: GET_COUNTRY, payload: res.data}))
 //     } catch (error) {
 //         console.log(error)

@@ -6,7 +6,7 @@
    border-radius: 28px;
    color: rgb(0, 0, 0);
    border-color: #0000ff;
-   background-color: #7ef0a0de;
+   background-color: #7ef0eade;
    justify-content: center;
    transition: 1000ms all;
    align-items: center;
@@ -27,6 +27,7 @@
    height: 180px;
    transition: 1000ms;
    border-radius: 8px;
+   border-bottom: 2px solid white;
 }
 
 h5{

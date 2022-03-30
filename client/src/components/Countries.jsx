@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useLocation } from 'react-router';
-import { getAllCountries, byName, byContinent, unmountAllCountries } from '../Redux/actions';
+import { getAllCountries, byName, byContinent, unmountAllCountries, activitiesDb } from '../Redux/actions';
 import CountryCard from './CountryCard'
 import CountryCards from './CountryCards'
 import Pagination from './Pagination'
@@ -14,12 +14,13 @@ const Countries = () => {
     const name = query.get('name')
     const continent = query.get('continent')
     const from = parseInt(query.get('from'))
-
     useEffect(() => {
+        dispatch(activitiesDb())
         name? dispatch(byName(name))
         : continent? dispatch(byContinent(continent))                               
-        : dispatch(getAllCountries())
-        return () => {dispatch(unmountAllCountries())}
+        : dispatch(getAllCountries()) 
+        return () => {
+            dispatch(unmountAllCountries())}
     }, [ dispatch, name, continent ])
 
     return (
@@ -35,28 +36,28 @@ const Countries = () => {
                 </div>
             )          
             :name || continent?
-            countries.length<=5?
-            (
-                <div className={styles.country}>
-                <div className={styles.content}>{
-                    countries.map(c => <CountryCards key={c.id} country={c} />)    
-                    }</div>
-                <Pagination className={styles.pagination} countries={countries}/>
-                </div>
-            )
-            :
-            (
-                <div className={styles.country}>
-                <div className={styles.content}>{
-                    countries.slice(from, from +5).map(c => <CountryCards key={c.id} country={c}/>)    
-                    }</div>
+                countries.length<=5?
+                (
+                    <div className={styles.country}>
                     <div className={styles.content}>{
-                    countries.slice(from+5, from===0? from+9:from+10).map(c => <CountryCards key={c.id} country={c}/>)    
-                    }</div>
-                <Pagination className={styles.pagination} countries={countries}/>
-                </div>
-            ):
-            countries  && (
+                        countries.map(c => <CountryCards key={c.id} country={c} />)    
+                        }</div>
+                    <Pagination className={styles.pagination} countries={countries}/>
+                    </div>
+                )
+                :
+                (
+                    <div className={styles.country}>
+                    <div className={styles.content}>{
+                        countries.slice(from, from +5).map(c => <CountryCards key={c.id} country={c}/>)    
+                        }</div>
+                        <div className={styles.content}>{
+                        countries.slice(from+5, from===0? from+9:from+10).map(c => <CountryCards key={c.id} country={c}/>)    
+                        }</div>
+                    <Pagination className={styles.pagination} countries={countries}/>
+                    </div>
+                )
+            :countries  && (
                 <div className={styles.country}>
                     <div className={styles.content}>{
                         countries.slice(from, from+5).map(c => <CountryCards key={c.id} country={c} />)    

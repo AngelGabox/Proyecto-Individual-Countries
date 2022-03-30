@@ -3,6 +3,7 @@
     align-items: center;
     flex-direction:column;
     height: 100vh;
+    background-color: rgba(133, 131, 131, 0.123);
     /* background: url('../assests/img/mapa_3.png'); */
 }
 .header{

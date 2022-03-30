@@ -7,7 +7,7 @@ const SearchBar = () => {
     const [ name, setName] = useState('')
 
     const handleOnClick = () => {
-        history.push(`/main?name=${name}`)
+        history.push(`/main?name=${name}%from=0`)
         setName('')
     }
         

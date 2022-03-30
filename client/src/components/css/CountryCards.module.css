@@ -6,7 +6,7 @@
     border-radius: 28px;
     color: rgb(0, 0, 0);
     border-color: #0000ff;
-    background-color: #7ef0a0de;
+    background-color: #7ef0eade;
     justify-content: center;
     transition: 400ms all;
     align-items: center;
@@ -23,6 +23,7 @@
  #card:hover .img {
     transition: 400ms all;
     border-radius: 8px;
+    border-bottom: 2px solid white;
  }
  h4{
     display: flex;

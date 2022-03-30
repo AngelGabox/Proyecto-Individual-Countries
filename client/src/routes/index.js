@@ -11,8 +11,8 @@ const index = () => {
         <header className='header'>    
         <Route path='/main' component={Nav}/>
         </header>
+        <Route exact path='/' component={Landing}/> 
         <Switch>
-            <Route exact path='/' component={Landing}/> 
             <Route exact path='/main' component={Home}/>
             <Route path='/main/create_activity' component={CreateActivity}/>
         </Switch>

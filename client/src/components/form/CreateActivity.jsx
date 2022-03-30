@@ -46,6 +46,7 @@ const CreateActivity = () => {
             alert('no se pudo crear la actividad, revisa los datos no pueden estar vacios')
         }
     }
+
     return (
         <div className={styles.contentForm}>
             <form className={styles.form} onSubmit={handleOnSubmit}>
