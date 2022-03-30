@@ -16,10 +16,15 @@ const preloadCountries = async () => {
             area: c.area
         }
     })
+    const paises_db = await Country.findAll()
+    if(!paises_db){
     countries = await Promise.all(countries.map( co => Country.create(co)))
+    return 'Paises cargados exitosamente :)'
+    }else{
+        return 'Ya hay paises'
+    }
     // console.log('ARRAY DE PAISES:', countries);
     // console.log('ESTO ME DEVUELVE PROMISE.ALL:', arr.then(value => console.log(value)));
-    return 'Paises cargados exitosamente :)'
     }catch(err){
         console.log(err)
         return'no se cargaron los paises :c'
