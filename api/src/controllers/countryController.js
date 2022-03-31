@@ -17,7 +17,7 @@ const preloadCountries = async () => {
         }
     })
     const paises_db = await Country.findAll()
-    if(!paises_db){
+    if(paises_db.length === 0){
     await Promise.all(countries.map( co => Country.create(co)))
     return 'Paises cargados exitosamente :)'
     }else{
