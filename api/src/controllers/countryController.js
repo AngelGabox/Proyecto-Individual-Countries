@@ -31,9 +31,8 @@ const preloadCountries = async () => {
     }
 }
 const allCountries = async() =>{
-    try {
-        
-        return await Country.findAll({
+    try {     
+        const countries = await Country.findAll({
             include: {
                 model: Activity,
                 attributes: ['name', 'id', "difficulty", "duration", "season"],
@@ -42,6 +41,7 @@ const allCountries = async() =>{
             }
         }
     });
+    return countries
     } catch (error) {
         console.log(error)
     }

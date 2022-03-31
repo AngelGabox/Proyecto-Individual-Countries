@@ -22,7 +22,7 @@ const { conn } = require('./src/db.js');
 const { preloadCountries } = require('./src/controllers/countryController')
 // Syncing all the models at once.
 conn.sync({ force: false }).then(() => {
-  server.listen(process.env.PORT, () => {
+  server.listen(process.env.PORT|| 3001, () => {
     console.log('%s Cargando los paises..')
     const preload = preloadCountries()
     console.log('%s ' + preload)
