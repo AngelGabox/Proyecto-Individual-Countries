@@ -5,8 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import dotenv from 'dotenv';
 import axios from 'axios';
-dotenv.config()
-axios.defaults.baseURL = 'https://back-project-countries.herokuapp.com/' 
+axios.defaults.baseURL = 'proyecto-individual-countries-production-ed6c.up.railway.app' 
 // process.env.REACT_APP_API || 
 ReactDOM.render(
   <React.StrictMode>
