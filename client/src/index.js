@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import dotenv from 'dotenv';
 import axios from 'axios';
-axios.defaults.baseURL = 'https://proyecto-individual-countries-production-ed6c.up.railway.app' 
+axios.defaults.baseURL = 'https://proyecto-individual-countries-production-ca6e.up.railway.app' 
 // process.env.REACT_APP_API || 
 ReactDOM.render(
   <React.StrictMode>
